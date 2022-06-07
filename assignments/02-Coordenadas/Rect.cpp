@@ -39,6 +39,24 @@ int Rect::getY()
     return y;
 }
 
+Rect Rect::operator-(Rect val)
+{
+        Rect tmp;
+        tmp.x = this->x - val.x;
+        tmp.y = this->y - val.y;
+
+        return tmp;
+}
+
+Rect Rect::operator-(Polar p)
+{
+    Rect tmp;
+    tmp.x = this->x - p.getR() * std::cos(p.getTheta());
+    tmp.y = this->y - p.getR() * std::sin(p.getTheta());
+
+    return tmp;
+}
+
 std::ostream& operator<<(std::ostream& output, Rect r)
 {
     output << "(" << r.getX() << ", " << r.getY() << ")\n";

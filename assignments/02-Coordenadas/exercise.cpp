@@ -33,4 +33,17 @@ int main()
   std::cout << "Multiplicando coordenadas polares:\n";
   std::cout << p1 << " * \n" << p2 << " = \n" << p3;
 
+
+  r4 = r3 - p1;
+  std::cout << "Restando coordenadas polares:\n";
+  std::cout << p1 << " * \n" << p2 << " = \n" << p3;
+
+  p3 = p1 / p2;
+  std::cout << "Dividiendo coordenadas polares:\n";
+  std::cout << p1 << " * \n" << p2 << " = \n" << p3;
+
+  
+
+
+
 }
